@@ -16,4 +16,4 @@ age = int(input("Enter your age:"))
 if age >= 14:
     print("Get your passport.")
 else:
-    print("Age up.")
+    print("Age up.")jjhnkhbkj
