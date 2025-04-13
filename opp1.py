@@ -1,10 +1,25 @@
 class Student:
-    print("Hellow world")
-    def __init__(self, height = 164):
+    number = 0
+    def __init__(self, height = 164, name = None):
         self.height = height
+        self.name = name
+        Student.number = Student.number + 1
+    def grow(self, height = 3):
+        self.height = self.height + height
 
-Artem = Student(height=170)
-Mark = Student()
+    def __str__(self):
+        return f"Я студент, з іменем {self.name} Мій зріст = {self.height}"
 
-print("My height = ", Artem.height)
-print("My height = ", Mark.height)
+Artem = Student(height=170, name="Artem")
+Mark = Student(name="Mark")
+
+print(Artem)
+print(Mark)
+
+while Mark.height < 180:
+    Mark.grow()
+print(Artem)
+print(Mark)
+
+print("number of students = ", Student.number)
+
